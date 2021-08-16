@@ -8,7 +8,7 @@
 - `<header>` container
     - `<h1>` Page Title
     - `<p>` Sources
-- `<section>` container
+- `<main>` container
     - 3 x `<article>` container
         - `<h2>` article title
         - `<p>` article contents
@@ -46,7 +46,7 @@ Confirm that the user really wants to take the quiz. If not, return from your ev
 
 8) Consider your data model. What objects will you be using? What are the key/value pairs? What arrays do you need? What needs to live in local storage? N/A
 
-9) Consider what features _depend_ on what other features. Use this dependency logic to figure out what order to complete tasks.
+9) Consider what features _depend_ on what other features. Use this dependency logic to figure out what order to complete tasks. N/A
 
 
 
