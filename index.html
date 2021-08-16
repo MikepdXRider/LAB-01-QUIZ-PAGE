@@ -18,8 +18,9 @@
         <p>Sources: <a href="https://en.wikipedia.org/wiki/Mead">Wikipedia</a></p>
     </header>
     <main class="main-container">
-        <article class="art-1">
-            <h2>TITLE</h2>
+        <hr />
+        <article class="art-1 art">
+            <h3>TITLE</h3>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam repellendus similique consectetur
                 voluptas facilis molestiae voluptates nobis error sapiente, ad, ipsa vero non, sint eligendi? Eos
                 praesentium iusto magnam exercitationem.
@@ -27,8 +28,9 @@
                 provident, eius, nostrum aperiam vel, optio qui illo corrupti in. Eum quam, est nemo porro sapiente
                 excepturi assumenda.</p>
         </article>
-        <article class="art-2">
-            <h2>TITLE</h2>
+        <hr />
+        <article class="art-2 art">
+            <h3>TITLE</h3>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam repellendus similique consectetur
                 voluptas facilis molestiae voluptates nobis error sapiente, ad, ipsa vero non, sint eligendi? Eos
                 praesentium iusto magnam exercitationem.
@@ -36,8 +38,9 @@
                 provident, eius, nostrum aperiam vel, optio qui illo corrupti in. Eum quam, est nemo porro sapiente
                 excepturi assumenda.</p>
         </article>
-        <article class="art-3">
-            <h2>TITLE</h2>
+        <hr />
+        <article class="art-3 art">
+            <h3>TITLE</h3>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam repellendus similique consectetur
                 voluptas facilis molestiae voluptates nobis error sapiente, ad, ipsa vero non, sint eligendi? Eos
                 praesentium iusto magnam exercitationem.
@@ -45,20 +48,25 @@
                 provident, eius, nostrum aperiam vel, optio qui illo corrupti in. Eum quam, est nemo porro sapiente
                 excepturi assumenda.</p>
         </article>
+        <hr />
         <article class="event-container">
-            <media>
-                <img src="./assets/Swedish_Mead.jpg" alt="Mead">
+            <media class="media">
+                <img src="./assets/Swedish_Mead.jpg" alt="Mead" />
             </media>
             <section>
-                <button id="quiz-button">Start Quiz!</button>
-                <div id="result-div"></div>
+                <button id="quiz-button" class="button">Start Quiz!</button>
+                <div id="result-div" class="result-text">Injected stuffs here</div>
             </section>
+            <media class="media">
+                <img src="./assets/Medica_(Međimurje).jpg" alt="Mead" />
+            </media>
         </article>
+        <hr />
     </main>
     <footer class="footer-container">
-        <p id="attempt-counter"></p>
-        <p id="pass-counter"></p>
-        <p id="fail-counter"></p>
+        <p id="attempt-counter">Attempts:</p>
+        <p id="pass-counter">Pass:</p>
+        <p id="fail-counter">Fail:</p>
     </footer>
 
     <script type="module" src="./app.js"></script>
