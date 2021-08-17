@@ -98,7 +98,7 @@ main{
     bottom: 10px
 }
 
-.button:hover{
+.button:hover, .reset-button:hover{
     cursor: pointer;
     transform: scale(1.10);
 }
@@ -117,10 +117,20 @@ main{
     justify-content: space-around;
 }
 
+.reset-button{
+    border-radius: 50%;
+    background-color: var(--vivid-tangerine);
+    color: var(--raisin-black);
+    border: 2px solid black;
+    position: relative;
+    bottom: 5px;
+}
+
+
+/* Activated depending on test results */
 .result-div-fail{
     color: red;
 }
-
 
 .result-div-pass{
     color: green;
