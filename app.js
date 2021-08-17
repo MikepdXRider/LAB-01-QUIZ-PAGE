@@ -32,12 +32,13 @@ quizButtonEl.addEventListener('click', () =>{
         resultDiv.textContent = `Okay ${firstName} ${lastName}, you got ${correctAnswer}/3 correct.`;
         if (correctAnswer === 3) {
             passCounter++ ;
-            resultDiv.style.color = 'green';
+            // resultDiv.style.color = 'green';
+            resultDiv.setAttribute('class', 'resultDivStyle');
             resultDiv.textContent += 'Great work! You got 100% of the questions right.';
         } else {
             failCounter++;
             let percentage = Math.floor((correctAnswer / 3) * 100);
-            resultDiv.style.color = 'red';
+            // resultDiv.style.color = 'red';
             resultDiv.textContent += `You only got ${percentage}% of the questions right.`;
         }
         attemptCounterEl.textContent = `Attempts: ${attemptCounter}`;
