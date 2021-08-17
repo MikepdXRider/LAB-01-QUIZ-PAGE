@@ -1,14 +1,26 @@
-export const countsAsAYes = (userInput) => {
+const resultDiv = document.getElementById('result-div');
+const attemptCounterEl = document.getElementById('attempt-counter');
+const passCounterEl = document.getElementById('pass-counter');
+const failCounterEl = document.getElementById('fail-counter');
+
+const countsAsAYes = (userInput) => {
     return userInput.charAt(0).toLowerCase() === 'y';
 };
 
-const askForName = () => {
+export const askForName = () => {
     const firstName = prompt('What\'s your first name?');
     const lastName = prompt('What\'s your last name?');
     return [firstName, lastName];
 };
 
-const askQuestions = (askforName()) => {
+// initialize state
+let attemptCounter = 0;
+let passCounter = 0;
+let failCounter = 0;
+
+export const askQuestions = (aFN) => {
+    const firstName = aFN[0];
+    const lastName = aFN[1];
     const userConfirmation = confirm(`Thanks ${firstName} ${lastName}! Are you ready for the quiz?`);
     if (userConfirmation) {
         let correctAnswer = 0;
@@ -26,19 +38,22 @@ const askQuestions = (askforName()) => {
     }
 };
 
-const setResults = (askQuestions()) => {
-resultDiv.textContent = `Okay ${firstName} ${lastName}, you got ${correctAnswer}/3 correct.`;
-if (correctAnswer === 3) {
-    passCounter++ ;
-    resultDiv.style.color = 'green';
-    resultDiv.textContent += 'Great work! You got 100% of the questions right.';
-} else {
-    failCounter++;
-    let percentage = Math.floor((correctAnswer / 3) * 100);
-    resultDiv.style.color = 'red';
-    resultDiv.textContent += `You only got ${percentage}% of the questions right.`;
-}
-attemptCounterEl.textContent = `Attempts: ${attemptCounter}`;
-passCounterEl.textContent = `Pass: ${passCounter}`;
-failCounterEl.textContent = `Fail: ${failCounter}`;
+export const setResults = (aQ) => {
+    const fName = aQ[0];
+    const lName = aQ[1];
+    const cAnswer = aQ[2];
+    resultDiv.textContent = `Okay ${fName} ${lName}, you got ${cAnswer}/3 correct.`;
+    if (cAnswer === 3) {
+        passCounter++ ;
+        resultDiv.style.color = 'green';
+        resultDiv.textContent += 'Great work! You got 100% of the questions right.';
+    } else {
+        failCounter++;
+        let percentage = Math.floor((cAnswer / 3) * 100);
+        resultDiv.style.color = 'red';
+        resultDiv.textContent += `You only got ${percentage}% of the questions right.`;
+    }
+    attemptCounterEl.textContent = `Attempts: ${attemptCounter}`;
+    passCounterEl.textContent = `Pass: ${passCounter}`;
+    failCounterEl.textContent = `Fail: ${failCounter}`;
 }
