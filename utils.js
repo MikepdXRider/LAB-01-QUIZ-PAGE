@@ -57,3 +57,10 @@ export const setResults = (aQ) => {
     passCounterEl.textContent = `Pass: ${passCounter}`;
     failCounterEl.textContent = `Fail: ${failCounter}`;
 }
+
+export const reset = () => {
+    attemptCounterEl.textContent = `Attempts: 0`;
+    passCounterEl.textContent = `Pass: 0`;
+    failCounterEl.textContent = `Fail: 0`;
+    resultDiv.textContent = '';
+}
