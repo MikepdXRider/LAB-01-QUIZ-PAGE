@@ -6,6 +6,7 @@ const resultDiv = document.getElementById('result-div');
 const attemptCounterEl = document.getElementById('attempt-counter');
 const passCounterEl = document.getElementById('pass-counter');
 const failCounterEl = document.getElementById('fail-counter');
+const resetButtonEl = document.getElementById('reset-button');
 
 // initialize state
 let attemptCounter = 0;
@@ -49,3 +50,14 @@ quizButtonEl.addEventListener('click', () =>{
         return;
     }
 });
+
+resetButtonEl.addEventListener('click', () => {
+    attemptCounterEl.textContent = `Attempts: 0`;
+    passCounterEl.textContent = `Pass: 0`;
+    failCounterEl.textContent = `Fail: 0`;
+    resultDiv.textContent = '';
+});
+
+  // get user input
+  // use user input to update state 
+  // update DOM to reflect the new state
