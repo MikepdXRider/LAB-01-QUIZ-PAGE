@@ -18,9 +18,9 @@ let attemptCounter = 0;
 let passCounter = 0;
 let failCounter = 0;
 
-export const askQuestions = (aFN) => {
-    const firstName = aFN[0];
-    const lastName = aFN[1];
+export const askQuestions = (askForNameArray) => {
+    const firstName = askForNameArray[0];
+    const lastName = askForNameArray[1];
     const userConfirmation = confirm(`Thanks ${firstName} ${lastName}! Are you ready for the quiz?`);
     if (userConfirmation) {
         let correctAnswer = 0;
@@ -38,20 +38,20 @@ export const askQuestions = (aFN) => {
     }
 };
 
-export const setResults = (aQ) => {
-    const fName = aQ[0];
-    const lName = aQ[1];
-    const cAnswer = aQ[2];
+export const setResults = (askQuestionsArray) => {
+    const fName = askQuestionsArray[0];
+    const lName = askQuestionsArray[1];
+    const cAnswer = askQuestionsArray[2];
     resultDiv.textContent = `Okay ${fName} ${lName}, you got ${cAnswer}/3 correct.`;
     if (cAnswer === 3) {
         passCounter++ ;
         resultDiv.style.color = 'green';
-        resultDiv.textContent += 'Great work! You got 100% of the questions right.';
+        resultDiv.textContent += ' Great work! You got 100% of the questions right.';
     } else {
         failCounter++;
         let percentage = Math.floor((cAnswer / 3) * 100);
         resultDiv.style.color = 'red';
-        resultDiv.textContent += `You only got ${percentage}% of the questions right.`;
+        resultDiv.textContent += ` You only got ${percentage}% of the questions right.`;
     }
     attemptCounterEl.textContent = `Attempts: ${attemptCounter}`;
     passCounterEl.textContent = `Pass: ${passCounter}`;

@@ -6,15 +6,11 @@ const resetButtonEl = document.getElementById('reset-button');
 
 // set event listeners 
 quizButtonEl.addEventListener('click', () =>{  
-    let aFN = askForName();
-    let aQ = askQuestions(aFN);
-    setResults(aQ);
+    let nameArray = askForName();
+    let questionsArray = askQuestions(nameArray);
+    setResults(questionsArray);
 });
 
 resetButtonEl.addEventListener('click', () => {
     reset();
 });
-
-  // get user input
-  // use user input to update state 
-  // update DOM to reflect the new state
