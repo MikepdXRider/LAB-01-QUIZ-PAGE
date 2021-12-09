@@ -1,6 +1,6 @@
 ## Making a plan
 1) Make a drawing of your app. Simple "wireframes"
-![](assets\wireframe.JPG)
+![](./assets/wireframe.JPG)
 
 2) Once you have a drawing, name the HTML elements you'll need to realize your vision
 3) For each HTML element ask: Why do I need this?
